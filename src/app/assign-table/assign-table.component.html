@@ -1,0 +1,33 @@
+<h3>Assign Table</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit) = "onSubmit()">
+
+    <div *ngIf="reservation">
+      <div>
+        <label><b>Customer Name: </b></label> {{reservation.customerName}}
+      </div>
+      <div>
+        <label><b>Phone Number: </b></label> {{reservation.phoneNumber}}
+      </div>
+      <div>
+        <label><b>Party Size: </b></label> {{reservation.partySize}}
+      </div>
+
+      <div>
+        <label><b>Select table :  </b></label>
+        <select [(ngModel)]="tableNumber" name = "tableNumber">
+
+          <option [value]="undefined">No Table selected</option>
+          <option [value]="number" *ngFor="let number of tablenumbers">
+            {{number}}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+
+    </div>
+  </form>
+</div>

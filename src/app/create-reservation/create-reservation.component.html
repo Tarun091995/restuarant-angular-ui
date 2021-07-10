@@ -1,0 +1,42 @@
+
+<h3>Book Reservation</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+      <label for="customerName">Customer Name</label>
+      <input type="text" class="form-control" id="customerName" required [(ngModel)]="reservation.customerName" name="customerName">
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="reservation.phoneNumber" name="phoneNumber">
+    </div>
+
+    <div class="form-group">
+      <label for="partySize">Party Size</label>
+      <input type="number" min = 1 class="form-control" id="partySize" required [(ngModel)]="reservation.partySize" name="partySize">
+    </div>
+
+<!--    <div class="form-group">-->
+<!--      <label>Reservation Date</label>-->
+<!--      <div class="input-group">-->
+<!--        <input class="form-control" placeholder="yyyy-mm-dd"-->
+<!--               ngbDatepicker #datepicker="ngbDatepicker"-->
+<!--               [(ngModel)]="reservation.reservationTime" name="reservationDate">-->
+<!--        <div class="input-group-addon" (click)="datepicker.toggle()" >-->
+<!--          <img src="../assets/images/calendar.png" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+
+  </form>
+
+  <div [hidden]="!submitted">
+    <h4>You submitted successfully!</h4>
+  </div>
+
