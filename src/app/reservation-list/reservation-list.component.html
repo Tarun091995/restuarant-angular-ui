@@ -25,7 +25,7 @@
         <td>{{reservation.reservationTime}}</td>
         <td>{{reservation.status}}</td>
         <td>{{reservation.tableNumber}}</td>
-        <button (click)="cancelReservation(reservation.id)"  class="btn btn-danger" style="margin-left: 10px">Cancel</button>
+        <button  class="btn btn-danger" style="margin-left: 10px" (click)="cancelReservation(reservation.id)">Cancel</button>
         <button  (click)="reservationDetails(reservation.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
         <button  (click)="assignTable(reservation.id)" class="btn btn-info" style="margin-left: 10px">Assign Table</button>
       </tr>

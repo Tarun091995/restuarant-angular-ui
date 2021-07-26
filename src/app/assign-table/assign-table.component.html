@@ -2,10 +2,11 @@
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit) = "onSubmit()">
 
-    <div *ngIf="reservation">
-      <div>
-        <label><b>Customer Name: </b></label> {{reservation.customerName}}
-      </div>
+    <div class="mb-3 row" *ngIf="reservation">
+        <label class="col-sm-2 col-form-label"><b>Customer Name: </b></label>
+         <div class="col-sm-10">
+           <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{reservation.customerName}}">
+         </div>
       <div>
         <label><b>Phone Number: </b></label> {{reservation.phoneNumber}}
       </div>

@@ -23,26 +23,15 @@
         <li class="nav-item nav-right ">
           <a routerLink="register" class="nav-link" routerLinkActive="register">Register</a>
         </li>
-
-
-
-<!--        <li class="nav-item nav-right ">-->
-<!--          <a routerLink="assignTable" class="nav-link" routerLinkActive="assignTable">A</a>-->
-<!--        </li>-->
-
       </ul>
     </div>
 
     <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+<!--      <li class="nav-item">-->
+<!--        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>-->
+<!--      </li>-->
       <li class="nav-item">
-        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
-      </li>
-      <li class="nav-item">
-        <a href="/customer-details" class="nav-link" routerLink="customer-details">Customer Details</a>
-      </li>
-
-      <li class="nav-item nav-right ">
-        <a routerLink="customerDetails" class="nav-link" routerLinkActive="customerDetails">Customer Details</a>
+        <a class="nav-link" routerLink="customerDetails">Customer Details</a>
       </li>
 
       <li class="nav-item nav-right ">
@@ -58,15 +47,22 @@
 <!--        <a routerLink="customerDetails" class="nav-link" routerLinkActive="customerDetails">Customer Details</a>-->
 <!--      </li>-->
 
-      <li class="nav-item nav-right ">
-        <a routerLink="AllReservations" class="nav-link" routerLinkActive="AllReservations">All Reservations</a>
-      </li>
+<!--      <li class="nav-item">-->
+<!--        <a href class="nav-link" (click)="logout()">LogOut</a>-->
+<!--      </li>-->
+<li>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          {{username}}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 
-      <li class="nav-item">
-        <a href class="nav-link" (click)="logout()">LogOut</a>
-      </li>
-
-
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#" (click)="logout()">Logout</a></li>
+<!--          <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+        </ul>
+      </div>
+</li>
     </ul>
   </nav>
 

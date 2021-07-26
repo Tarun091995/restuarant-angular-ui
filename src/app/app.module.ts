@@ -15,8 +15,8 @@ import { UpdateReservationComponent } from './update-reservation/update-reservat
 import { ViewReservationComponent } from './view-reservation/view-reservation.component';
 import { ReservationListComponent } from './reservation-list/reservation-list.component';
 import { AssignTableComponent } from './assign-table/assign-table.component';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule , NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,10 @@ import { AssignTableComponent } from './assign-table/assign-table.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgbModule,
+    NgbDatepickerModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

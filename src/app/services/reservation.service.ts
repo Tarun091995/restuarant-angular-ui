@@ -56,6 +56,7 @@ export class ReservationService {
 
     cancelReservation(id: number): Observable<any>
     {
+           console.log('in cancelReservation');
            const headers = new Headers();
            headers.append('Access-Control-Allow-Headers', 'Content-Type');
            headers.append('Access-Control-Allow-Methods', 'DELETE');

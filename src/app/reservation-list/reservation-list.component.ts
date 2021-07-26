@@ -33,11 +33,11 @@ export class ReservationListComponent implements OnInit {
   reservationDetails(id: number)
   {
        console.log("Fetching the reservation details for " + id);
-       this.router.navigate(['update-reservation',id]);
+       this.router.navigate(['updateReservation',id]);
   }
 
   assignTable(id: number)
   {
-      this.router.navigate(['assign-table',id]);
+      this.router.navigate(['assignTable',id]);
   }
 }

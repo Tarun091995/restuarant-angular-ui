@@ -7,6 +7,8 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
 import { ReservationListComponent } from  './reservation-list/reservation-list.component';
 import { UpdateReservationComponent } from  './update-reservation/update-reservation.component';
 import { AssignTableComponent } from  './assign-table/assign-table.component';
+import { ProfileComponent } from  './profile/profile.component';
+
 
 const routes: Routes = [
 { path: "login" , component: LoginComponent },
@@ -14,8 +16,9 @@ const routes: Routes = [
 { path: "register" , component: RegisterComponent },
 { path: "customerDetails" , component: CustomerDetailsComponent },
 { path: "AllReservations" , component: ReservationListComponent },
-{ path: "updateReservation/:id" , component: ReservationListComponent },
-{ path: "assignTable" , component: AssignTableComponent },
+{ path: "updateReservation/:id" , component: UpdateReservationComponent },
+{ path: "assignTable/:id" , component: AssignTableComponent },
+{ path: "profile" , component: ProfileComponent },
 
 ];
 
