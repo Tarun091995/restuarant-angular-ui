@@ -17,6 +17,13 @@ import { ReservationListComponent } from './reservation-list/reservation-list.co
 import { AssignTableComponent } from './assign-table/assign-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule , NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from '@danielmoncada/angular-datetime-picker';
+import { CommonModule, DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -42,6 +49,13 @@ import { NgbModule , NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     NgbModule,
     NgbDatepickerModule,
+    NgbDatepickerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

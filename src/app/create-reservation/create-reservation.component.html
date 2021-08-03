@@ -18,15 +18,24 @@
       <input type="number" min = 1 class="form-control" id="partySize" required [(ngModel)]="reservation.partySize" name="partySize">
     </div>
 
-    <div class="form-group">
+<!--    <div class="form-group">-->
+<!--      <label>Reservation Date</label>-->
+<!--      <div class="input-group">-->
+<!--        <input class="form-control" placeholder="yyyy-mm-dd"-->
+<!--               ngbDatepicker #datepicker="ngbDatepicker"-->
+<!--               [(ngModel)]="reservation.reservationTime" name="reservationDate">-->
+<!--        <div class="input-group-addon" (click)="datepicker.toggle()" >-->
+<!--          <img src="../assets/images/calendar.png" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <div class="input-group">
       <label>Reservation Date</label>
-      <div class="input-group">
-        <input class="form-control" placeholder="yyyy-mm-dd"
-               ngbDatepicker #datepicker="ngbDatepicker"
-               [(ngModel)]="reservation.reservationTime" name="reservationDate">
-        <div class="input-group-addon" (click)="datepicker.toggle()" >
-          <img src="../assets/images/calendar.png" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
-        </div>
+      <div>
+        <input class="form-control"  [(ngModel)]="reservation.reservationTime" name="reservationTime" [owlDateTime]="dt" [owlDateTimeTrigger]="dt" placeholder="Date Time" selectMode="single" pickerType="both"
+               dateTimeChange="">
+        <owl-date-time #dt></owl-date-time>
       </div>
     </div>
 

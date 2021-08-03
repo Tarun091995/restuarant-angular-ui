@@ -56,12 +56,14 @@ export class ReservationService {
 
     cancelReservation(id: number): Observable<any>
     {
+          console.log(id);
            console.log('in cancelReservation');
            const headers = new Headers();
            headers.append('Access-Control-Allow-Headers', 'Content-Type');
            headers.append('Access-Control-Allow-Methods', 'DELETE');
            headers.append('Access-Control-Allow-Origin', '*');
            console.log("Getting All Reservation");
+           console.log(this.baseurl + "/id/" + id);
            return this.httpClient.delete(this.baseurl + "/id/" + id);
     }
 
