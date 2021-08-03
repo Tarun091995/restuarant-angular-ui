@@ -7,4 +7,5 @@ export class Reservation {
     status : string;
     tableNumber : number;
     confirmationCode : string;
+    formattedReservationTime: string;
 }

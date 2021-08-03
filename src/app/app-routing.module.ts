@@ -8,9 +8,10 @@ import { ReservationListComponent } from  './reservation-list/reservation-list.c
 import { UpdateReservationComponent } from  './update-reservation/update-reservation.component';
 import { AssignTableComponent } from  './assign-table/assign-table.component';
 import { ProfileComponent } from  './profile/profile.component';
-
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+{ path: "", component: HomeComponent },
 { path: "login" , component: LoginComponent },
 { path: "create-reservation" , component: CreateReservationComponent },
 { path: "register" , component: RegisterComponent },

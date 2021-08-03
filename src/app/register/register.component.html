@@ -6,6 +6,10 @@
 
       <div class="form-group">
         <label for="username">Username</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">@</span>
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
         <input type="text" class="form-control" size="30" name="username" [(ngModel)]="form.username" minlength="3" maxlength="20" required #username="ngModel">
         <div  class="alert alert-danger" role="alert" *ngIf="f.submitted && username.invalid"> Username is required!
           <div *ngIf="username.errors?.minlength">Username must be at least 3 characters</div>

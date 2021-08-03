@@ -22,7 +22,7 @@
         <td>{{reservation.customerName}}</td>
         <td>{{reservation.phoneNumber}}</td>
         <td>{{reservation.partySize}}</td>
-        <td>{{reservation.reservationTime}}</td>
+        <td>{{reservation.formattedReservationTime}}</td>
         <td>{{reservation.status}}</td>
         <td>{{reservation.tableNumber}}</td>
         <button  class="btn btn-danger" style="margin-left: 10px" (click)="cancelReservation(reservation.id)">Cancel</button>
