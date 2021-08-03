@@ -13,6 +13,10 @@ import { Router,ActivatedRoute  } from '@angular/router';
 })
 export class AssignTableComponent implements OnInit {
 
+   isSuccessful = false;
+   iscreateRegistrationFailed = false;
+   errorMessage = '';
+
   reservation: Reservation = new Reservation();
   submitted:boolean = false;
   id: number;
@@ -41,6 +45,9 @@ export class AssignTableComponent implements OnInit {
            this.reservationService.assignTable(this.reservation.id,this.tableNumber).subscribe(data => {
            console.log("Table number ",this.tableNumber);
            console.log("reservation id",this.reservation.id);
+
+                             this.isSuccessful = true;
+                             this.iscreateRegistrationFailed = false;
            //this.reservation = data;
       },error =>console.log(error));
       }

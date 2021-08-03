@@ -12,6 +12,10 @@ import { Router,ActivatedRoute  } from '@angular/router';
 })
 export class UpdateReservationComponent implements OnInit {
 
+   isSuccessful = false;
+   iscreateRegistrationFailed = false;
+   errorMessage = '';
+
   reservation: Reservation = new Reservation();
   submitted:boolean = false;
   id: number
@@ -40,6 +44,8 @@ export class UpdateReservationComponent implements OnInit {
 
             this.reservationService.updateReservation(this.reservation).subscribe(data => {
             console.log(data);
+                  this.isSuccessful = true;
+                  this.iscreateRegistrationFailed = false;
     },
     error =>console.log(error));
 }

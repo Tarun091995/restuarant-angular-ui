@@ -1,4 +1,6 @@
-
+<div class="alert alert-success" *ngIf="isSuccessful">
+  Your Updation is successful!
+</div>
 <h3>Update Reservation</h3>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit) = "onSubmit()">
@@ -36,8 +38,5 @@
 
   </form>
 
-  <div [hidden]="!submitted">
-    <h4>You submitted successfully!</h4>
-  </div>
 
 

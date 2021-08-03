@@ -1,3 +1,7 @@
+
+<div class="alert alert-success" *ngIf="isSuccessful">
+  Table Assigned successful!
+</div>
 <h3>Assign Table</h3>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit) = "onSubmit()">

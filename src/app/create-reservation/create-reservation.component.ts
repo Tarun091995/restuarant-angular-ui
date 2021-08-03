@@ -16,6 +16,10 @@ import { DatePipe } from '@angular/common';
 export class CreateReservationComponent implements OnInit
  {
 
+    isSuccessful = false;
+    iscreateRegistrationFailed = false;
+    errorMessage = '';
+
     reservation: Reservation = new Reservation();
     submitted = false;
 
@@ -51,6 +55,8 @@ export class CreateReservationComponent implements OnInit
 
       this.reservationService.createReservation(this.reservation).subscribe(data => {
       console.log(data);
+      this.isSuccessful = true;
+      this.iscreateRegistrationFailed = false;
       },
       error =>console.log(error));
   }
