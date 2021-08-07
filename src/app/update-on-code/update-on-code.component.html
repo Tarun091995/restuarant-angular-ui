@@ -1,0 +1,16 @@
+<div class="alert alert-success" *ngIf="isnull">
+  Your Updation is successful!
+</div>
+
+<h3>Update Reservation</h3>
+<!--<div [hidden]="submitted" style="width: 400px;">-->
+  <form (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+      <label for="confirmationCode">Confirmation Code</label>
+      <input type="text" class="form-control" id="confirmationCode" required [(ngModel)]="reservation.confirmationCode" name="confirmationCode">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+<!--</div>-->

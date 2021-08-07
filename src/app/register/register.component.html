@@ -5,11 +5,15 @@
     <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
 
       <div class="form-group">
-        <label for="username">Username</label>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">@</span>
-          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
+       <label for="username">Username</label>
+<!--        <div class="input-group mb-3">-->
+<!--          <span class="input-group-text" id="basic-addon1">@</span>-->
+<!--          <input type="text" class="form-control" size="30" name="username" [(ngModel)]="form.email" minlength="3" maxlength="20" required #email="ngModel" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">-->
+<!--          <div  class="alert alert-danger" role="alert" *ngIf="f.submitted && username.invalid"> Username is required!-->
+<!--            <div *ngIf="username.errors?.minlength">Username must be at least 3 characters</div>-->
+<!--            <div *ngIf="username.errors?.minlength">Username must be at most 20 characters</div>-->
+<!--          </div>-->
+<!--        </div>-->
         <input type="text" class="form-control" size="30" name="username" [(ngModel)]="form.username" minlength="3" maxlength="20" required #username="ngModel">
         <div  class="alert alert-danger" role="alert" *ngIf="f.submitted && username.invalid"> Username is required!
           <div *ngIf="username.errors?.minlength">Username must be at least 3 characters</div>

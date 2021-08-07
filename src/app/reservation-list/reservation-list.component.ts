@@ -24,10 +24,13 @@ export class ReservationListComponent implements OnInit {
       this.reservations = this.reservationService.getAllReservations();
   }
 
-  cancelReservation(id: number)
+  cancelReservation(reservation: any)
   {
-      console.log("Fetching the reservation details for " + id);
-      this.reservationService.cancelReservation(id);
+      console.log("Fetching the reservation details for " + reservation);
+      this.reservationService.cancelReservation(reservation).subscribe(data => {
+      console.log(data);
+      },
+       error =>console.log(error));
   }
 
   reservationDetails(id: number)
@@ -38,6 +41,7 @@ export class ReservationListComponent implements OnInit {
 
   assignTable(id: number)
   {
+
       this.router.navigate(['assignTable',id]);
   }
 }

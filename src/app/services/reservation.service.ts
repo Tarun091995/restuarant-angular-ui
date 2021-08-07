@@ -54,17 +54,16 @@ export class ReservationService {
        return this.httpClient.get(this.baseurl + "/id/" + id);
     }
 
-    cancelReservation(id: number): Observable<any>
+    cancelReservation(reservation: any): Observable<any>
     {
-          console.log(id);
-           console.log('in cancelReservation');
+          console.log(reservation);
+           console.log('in cancelReservation', reservation);
            const headers = new Headers();
            headers.append('Access-Control-Allow-Headers', 'Content-Type');
            headers.append('Access-Control-Allow-Methods', 'DELETE');
            headers.append('Access-Control-Allow-Origin', '*');
-           console.log("Getting All Reservation");
-           console.log(this.baseurl + "/id/" + id);
-           return this.httpClient.delete(this.baseurl + "/id/" + id);
+           console.log(this.baseurl + "/id/" + reservation.id);
+           return this.httpClient.delete(this.baseurl+"/id/" + reservation.id);
     }
 
     updateReservation(reservation: Object) : Observable<Object>
@@ -88,7 +87,7 @@ export class ReservationService {
             return this.httpClient.put(this.baseurl + "/assignTable/id/" + id + "/tableNumber/ "+ tableNumber,null);
     }
 
-    checkCode(confirmationCode: string)
+    checkCode(confirmationCode: string): Observable<any>
     {
        const headers = new Headers();
        headers.append('Access-Control-Allow-Headers', 'Content-Type');
@@ -99,6 +98,8 @@ export class ReservationService {
 //        console.log(this.baseurl + "/confirmationCode/" + confirmationCode);
        return this.httpClient.get(this.baseurl + "/confirmationCode/" + confirmationCode);
     }
+
+
 
     getGuestDetails()
     {

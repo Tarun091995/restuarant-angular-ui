@@ -24,6 +24,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from '@danielmoncada/angular-datetime-picker';
 import { CommonModule, DatePipe } from '@angular/common';
+import { SeatingComponent } from './seating/seating.component';
+import { UpdateOnCodeComponent } from './update-on-code/update-on-code.component';
+import { ListCustomerReservationComponent } from './list-customer-reservation/list-customer-reservation.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,10 @@ import { CommonModule, DatePipe } from '@angular/common';
     ViewReservationComponent,
     ReservationListComponent,
     AssignTableComponent,
+    SeatingComponent,
+    UpdateOnCodeComponent,
+    ListCustomerReservationComponent,
+
 
   ],
   imports: [

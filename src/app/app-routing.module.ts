@@ -9,6 +9,9 @@ import { UpdateReservationComponent } from  './update-reservation/update-reserva
 import { AssignTableComponent } from  './assign-table/assign-table.component';
 import { ProfileComponent } from  './profile/profile.component';
 import { HomeComponent } from './home/home.component';
+import { SeatingComponent } from './seating/seating.component';
+import { UpdateOnCodeComponent } from './update-on-code/update-on-code.component'
+import { ListCustomerReservationComponent } from './list-customer-reservation/list-customer-reservation.component';
 
 const routes: Routes = [
 { path: "", component: HomeComponent },
@@ -20,6 +23,10 @@ const routes: Routes = [
 { path: "updateReservation/:id" , component: UpdateReservationComponent },
 { path: "assignTable/:id" , component: AssignTableComponent },
 { path: "profile" , component: ProfileComponent },
+{ path: "seating" , component: SeatingComponent },
+{ path: "updateOnCode" , component: UpdateOnCodeComponent },
+{ path: "confirmationCode/:id" , component: ListCustomerReservationComponent }
+
 
 ];
 
