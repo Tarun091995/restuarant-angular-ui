@@ -20,7 +20,7 @@ export class SeatingComponent implements OnInit {
 
       getallReservations()
       {
-          this.reservations = this.reservationService.getAllReservations();
+          this.reservations = this.reservationService.getAllReservationsForSeating();
       }
         assignTable(id: number)
         {

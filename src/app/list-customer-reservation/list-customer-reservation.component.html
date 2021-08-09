@@ -11,6 +11,7 @@
         <th>Phone Number</th>
         <th>Party Size</th>
         <th>Date and Time</th>
+        <th>Confirmation Code</th>
         <th>Status</th>
         <th>Table Number</th>
         <th>Actions</th>
@@ -23,6 +24,7 @@
         <td>{{reservation.phoneNumber}}</td>
         <td>{{reservation.partySize}}</td>
         <td>{{reservation.formattedReservationTime}}</td>
+        <td>{{reservation.confirmationCode}}</td>
         <td>{{reservation.status}}</td>
 
         <td *ngIf = "reservation.tableNumber != -1">{{reservation.tableNumber}}</td>

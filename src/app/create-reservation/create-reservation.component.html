@@ -11,17 +11,17 @@
 <!--    <div class="col-md-4">-->
     <div class="form-group">
       <label for="customerName">Customer Name</label>
-      <input type="text" class="form-control" id="customerName" required [(ngModel)]="reservation.customerName" name="customerName">
+      <input type="text" class="form-control" id="customerName"  autocomplete="off" required [(ngModel)]="reservation.customerName" name="customerName">
     </div>
 
     <div class="form-group">
       <label for="phoneNumber">Phone Number</label>
-      <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="reservation.phoneNumber" name="phoneNumber">
+      <input type="text" class="form-control" id="phoneNumber" autocomplete="off" required [(ngModel)]="reservation.phoneNumber" name="phoneNumber">
     </div>
 
     <div class="form-group">
       <label for="partySize">Party Size</label>
-      <input type="number" min = 1 class="form-control" id="partySize" required [(ngModel)]="reservation.partySize" name="partySize">
+      <input type="number" min = 1 class="form-control" id="partySize"  autocomplete="off" required [(ngModel)]="reservation.partySize" name="partySize">
     </div>
 
 <!--    <div class="form-group">-->
@@ -39,7 +39,7 @@
     <div class="form-group">
       <label>Reservation Date</label>
       <div>
-        <input class="form-control"  [(ngModel)]="reservation.reservationTime" name="reservationTime" [owlDateTime]="dt" [owlDateTimeTrigger]="dt" placeholder="Date Time" selectMode="single" pickerType="both"
+        <input class="form-control"  [(ngModel)]="reservation.reservationTime" autocomplete="off" name="reservationTime" [owlDateTime]="dt" [owlDateTimeTrigger]="dt" placeholder="Date Time" selectMode="single" pickerType="both"
                dateTimeChange="">
         <owl-date-time #dt></owl-date-time>
       </div>

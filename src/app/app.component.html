@@ -15,14 +15,22 @@
       </ul>
     </div>
 
+
+
     <div class="collapse navbar-collapse" id="login" *ngIf="!isLoggedIn">
       <ul class="navbar-nav  ml-auto">
+
+        <li class="nav-item nav-right ">
+          <a routerLink="updateOnCode" class="nav-link" routerLinkActive="updateReservation">Update Reservation</a>
+        </li>
         <li class="nav-item nav-right ">
           <a routerLink="login" class="nav-link" routerLinkActive="active">Login</a>
         </li>
         <li class="nav-item nav-right ">
           <a routerLink="register" class="nav-link" routerLinkActive="register">Register</a>
         </li>
+
+
       </ul>
     </div>
 
@@ -38,9 +46,7 @@
         <a routerLink="AllReservations" class="nav-link" routerLinkActive="AllReservations">All Reservations</a>
       </li>
 
-      <li class="nav-item nav-right ">
-        <a routerLink="updateOnCode" class="nav-link" routerLinkActive="updateReservation">Update Reservation</a>
-      </li>
+
 
 
       <li class="nav-item nav-right ">

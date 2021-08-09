@@ -45,13 +45,9 @@ export class CreateReservationComponent implements OnInit
 
   createReservation()
   {
-//       let myDate = this.datePipe.transform(this.reservation.reservationTime,'yyyy-MM-dd');// e.g. myDate = 2017-01-01
        console.log(this.reservation.reservationTime.year);
        console.log(this.reservation.reservationTime.month);
        console.log(this.reservation.reservationTime.day);
-
-//       this.reservation.reservationTime = new Date(this.reservation.reservationTime.year,
-//       this.reservation.reservationTime.month,this.reservation.reservationTime.day)
 
       this.reservationService.createReservation(this.reservation).subscribe(data => {
       console.log(data);

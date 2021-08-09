@@ -14,7 +14,7 @@
 <!--            <div *ngIf="username.errors?.minlength">Username must be at most 20 characters</div>-->
 <!--          </div>-->
 <!--        </div>-->
-        <input type="text" class="form-control" size="30" name="username" [(ngModel)]="form.username" minlength="3" maxlength="20" required #username="ngModel">
+        <input type="text" class="form-control" size="30" name="username" [(ngModel)]="form.username" minlength="3" maxlength="20" required #username="ngModel" autocomplete="off">
         <div  class="alert alert-danger" role="alert" *ngIf="f.submitted && username.invalid"> Username is required!
           <div *ngIf="username.errors?.minlength">Username must be at least 3 characters</div>
           <div *ngIf="username.errors?.minlength">Username must be at most 20 characters</div>
@@ -23,7 +23,7 @@
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="text" class="form-control" size="30" name="email" [(ngModel)]="form.email" minlength="3" maxlength="20" required #email="ngModel">
+        <input type="text" class="form-control" size="30" name="email" autocomplete="off" [(ngModel)]="form.email" minlength="3" maxlength="20" required #email="ngModel">
         <div  class="alert alert-danger" role="alert" *ngIf="f.submitted && email.invalid"> Email is required!
           <div *ngIf="username.errors?.email">Username must be at most 20 characters</div>
         </div>
@@ -31,7 +31,7 @@
 
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="text" class="form-control" size="30" name="username" [(ngModel)]="form.password"  minlength="6" required #password="ngModel">
+        <input type="password" class="form-control" size="30" name="username"  autocomplete="off" [(ngModel)]="form.password"  minlength="6" required #password="ngModel">
         <div  class="alert alert-danger" role="alert" *ngIf="f.submitted && password.invalid"> Password is required!
           <div *ngIf="password.errors?.required">Password is required</div>
           <div *ngIf="password.errors?.minlength"> Password must be at least 6 characters</div>

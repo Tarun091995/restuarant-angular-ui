@@ -96,7 +96,7 @@ export class ReservationService {
        console.log("Creating Reservation");
 //        console.log(confirmationCode);
 //        console.log(this.baseurl + "/confirmationCode/" + confirmationCode);
-       return this.httpClient.get(this.baseurl + "/confirmationCode/" + confirmationCode);
+       return this.httpClient.get(this.baseurl + "/code/" + confirmationCode);
     }
 
 
@@ -112,6 +112,17 @@ export class ReservationService {
             return this.httpClient.get(this.baseurl + "/customerDetails");
 
      //     return this.httpClient.get('./assets/data/customerDetails.json');
+    }
+
+
+    getAllReservationsForSeating(): Observable<any>
+    {
+                 const headers = new Headers();
+                 headers.append('Access-Control-Allow-Headers', 'Content-Type');
+                 headers.append('Access-Control-Allow-Methods', 'GET');
+                 headers.append('Access-Control-Allow-Origin', '*');
+                 console.log("Getting All Reservation Details For Seating");
+                 return this.httpClient.get(this.baseurl + "/seating")
     }
 
 //     registerUser()

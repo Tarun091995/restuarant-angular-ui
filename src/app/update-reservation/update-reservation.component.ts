@@ -39,13 +39,10 @@ export class UpdateReservationComponent implements OnInit {
 
     updateReservation()
     {
-      this.reservation.reservationTime = new Date(this.reservation.reservationTime.year,
-      this.reservation.reservationTime.month,this.reservation.reservationTime.day)
-
-            this.reservationService.updateReservation(this.reservation).subscribe(data => {
+      this.reservationService.updateReservation(this.reservation).subscribe(data => {
             console.log(data);
-                  this.isSuccessful = true;
-                  this.iscreateRegistrationFailed = false;
+            this.isSuccessful = true;
+            this.iscreateRegistrationFailed = false;
     },
     error =>console.log(error));
 }

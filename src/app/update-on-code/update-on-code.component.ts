@@ -28,6 +28,7 @@ export class UpdateOnCodeComponent implements OnInit {
 
   checkcode()
   {
+
       this.router.navigate(['confirmationCode',this.reservation.confirmationCode]);
 //     this.reservationService.checkCode(this.reservation.confirmationCode).subscribe(data => {
 //
